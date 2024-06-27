@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:background="#F8F9FA"
+    android:padding="16dp">
+
+    <TextView
+
+        android:id="@+id/emoji1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="👍"
+        android:textSize="30sp"
+        android:padding="8dp"/>
+
+    <TextView
+        android:id="@+id/emoji2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="🌟"
+        android:textSize="30sp"
+        android:padding="8dp"/>
+
+    <TextView
+        android:id="@+id/emoji3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="👏"
+
+        android:textSize="30sp"
+        android:padding="5dp"/>
+
+    <TextView
+        android:id="@+id/emoji4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="✨"
+
+        android:textSize="30sp"
+        android:padding="8dp"/>
+
+    <TextView
+        android:id="@+id/emoji5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="⭐"
+        android:textSize="30sp"
+        android:padding="5dp"/>
+    <TextView
+        android:id="@+id/remove"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Remove"
+        android:textSize="10sp"
+        android:padding="8dp"/>
+</LinearLayout>

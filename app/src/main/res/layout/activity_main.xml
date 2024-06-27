@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="5dp"
+    android:background="@color/white"
+    android:scrollbarAlwaysDrawVerticalTrack="true"
+    android:scrollbarThumbHorizontal="@id/card"
+    tools:context=".MainActivity">
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="IMU"
+        android:textSize="30dp"
+        />
+    <TextView
+        android:layout_marginTop="5dp"
+        android:layout_below="@id/card"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:id="@+id/loading"/>
+    <androidx.cardview.widget.CardView
+        android:layout_below="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10px"
+        android:id="@+id/card"
+        app:contentPadding="10dp"
+        app:cardElevation="10dp"
+        app:cardCornerRadius="10dp"
+        app:cardBackgroundColor="#66A59F">
+        <AutoCompleteTextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Enter Patient Name or ID"/>
+
+
+
+        <Button
+            android:id="@+id/retrive_file_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginLeft="250dp"
+            android:text="Get Report" />
+
+
+
+    </androidx.cardview.widget.CardView>
+    <ScrollView
+        android:id="@+id/scroll"
+        android:layout_below="@id/loading"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+       >
+        <RelativeLayout
+            android:id="@+id/charts"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <androidx.cardview.widget.CardView
+                android:id="@+id/chart"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                app:cardCornerRadius="8dp"
+                app:contentPadding="5dp"
+                app:cardElevation="10dp"
+                app:cardBackgroundColor="#DAEFED">
+                <TextView
+                    android:id="@+id/text1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Summary of Arm usage (hr)"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    android:textSize="20sp"
+                    android:textColor="#474A4A"
+                    android:textStyle="normal"
+                    tools:ignore="HardcodedText"
+                    />
+<!--                <Button-->
+<!--                    android:id="@+id/emojiupdate"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginLeft="305dp"-->
+<!--                    android:hint="update"-->
+<!--                    />-->
+                <com.github.mikephil.charting.charts.LineChart
+                    android:id="@+id/line_chart"
+                    android:layout_marginTop="50dp"
+                    android:layout_marginBottom="18dp"
+                    android:layout_below="@+id/text1"
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp"
+                    />
+
+<!--                <com.anychart.AnyChartView-->
+<!--                    android:id="@+id/line_chart"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="409dp"-->
+<!--                    android:layout_marginTop="50dp"-->
+<!--                    android:layout_marginBottom="18dp" />-->
+
+
+
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_below="@+id/chart"
+                android:id="@+id/chart1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                app:cardCornerRadius="8dp"
+                app:contentPadding="5dp"
+                app:cardElevation="10dp"
+                app:cardBackgroundColor="#DAEFED">
+                <TextView
+                    android:id="@+id/text2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Daily Arm usage"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    android:textSize="20sp"
+                    android:textColor="#474A4A"
+                    android:textStyle="normal"
+                    tools:ignore="HardcodedText"
+                    />
+                <TextView
+                    android:id="@+id/date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" "
+                    android:layout_marginLeft="200dp"
+                    android:layout_marginTop="5dp"
+                    android:textSize="20sp"
+                    android:textColor="#474A4A"
+                    android:textStyle="normal"
+                    tools:ignore="HardcodedText"
+                    />
+
+                <com.github.mikephil.charting.charts.LineChart
+                    android:id="@+id/line_chart1"
+                    android:layout_marginTop="50dp"
+                    android:layout_marginBottom="18dp"
+                    android:layout_below="@+id/text1"
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp"
+                    />
+
+
+                <!--                <com.anychart.AnyChartView-->
+<!--                    android:id="@+id/line_chart2"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="409dp"-->
+<!--                    android:layout_marginTop="50dp"-->
+<!--                    android:layout_marginBottom="18dp" />-->
+
+
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/chart2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/chart1"
+                android:layout_marginTop="20dp"
+                app:cardBackgroundColor="#DAEFED"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="10dp"
+                app:contentPadding="5dp">
+
+                <TextView
+                    android:id="@+id/text3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    android:text="Relative Arm usage"
+                    android:textColor="#474A4A"
+                    android:textSize="20sp"
+                    android:textStyle="normal"
+                    tools:ignore="HardcodedText" />
+
+                <com.github.mikephil.charting.charts.LineChart
+                    android:id="@+id/line_chart2"
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp"
+                    android:layout_below="@+id/text1"
+                    android:layout_marginTop="50dp"
+                    android:layout_marginBottom="18dp" />
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/chart2"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="15dp"
+                app:cardBackgroundColor="#009688"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="10dp"
+                app:contentPadding="10dp">
+
+                <EditText
+                    android:id="@+id/name1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="Enter your comments.."
+
+                    >
+
+                </EditText>
+
+                <Button
+                    android:id="@+id/commentbt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="250dp"
+                    android:text="Add comment" />
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/reccyleview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="70dp"/>
+
+                <TextView
+                    android:id="@+id/viwecomment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="50dp"
+                    android:text="view comments..."
+                    android:textColor="@color/white"/>
+            </androidx.cardview.widget.CardView>
+
+
+        </RelativeLayout>
+
+
+    </ScrollView>
+
+
+</RelativeLayout>
